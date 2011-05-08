@@ -1,0 +1,25 @@
+{
+  "name": "BLANK",
+  "version": "0.1",
+  "description": "descrip",
+  "icons": {
+    "16": "im/icon16.png",
+    "32": "im/icon32.png",
+    "48": "im/icon48.png",
+    "128":"im/icon128.png" },
+  "background_page": "background.html",
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "page_action": {
+    "default_icon": "pageaction.png",
+    "popup": "popup.html"
+  },
+  "permissions": ["tabs"]
+}
